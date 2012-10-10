@@ -16,7 +16,7 @@ Créer un utilisateur
 
 * Envoyez une requète POST vers /users.xml, avec comme paramètre 'email' et 'password' valides
 * Si la création se passe bien vous devriez avoir ceci en retour :
-	<?xml version="1.0" encoding="UTF-8"?>
+```<?xml version="1.0" encoding="UTF-8"?>
 	<response>
 		<user>
 			<email>first.user@hostname.com</email>
@@ -24,7 +24,7 @@ Créer un utilisateur
 			<updated>2012-10-10 13:38:14</updated>
 			<created>2012-10-10 13:38:14</created>
 		</user>
-	</response>
+	</response>```
 
 * Vous pouvez désormais demander un token d'authentification necessaire à chaque requète.
 
@@ -33,7 +33,7 @@ Demander un token d'authentification
 
 * Envoyez une requète POST vers /auth.xml?key=cle_de_votre_application, avec comme paramètre 'email' et 'password' valides. (clé de "Sample Application" = 3c6e0b8a9c15224a8228b9a98ca1531d)
 * Si l'authentification est réussie, vous devriez avoir un token en retour :
-	<?xml version="1.0" encoding="UTF-8"?>
+```<?xml version="1.0" encoding="UTF-8"?>
 	<response>
 		<user>
 			<id>user-50756c36c1e586.47447762</id>
@@ -42,7 +42,7 @@ Demander un token d'authentification
 			<updated>2012-10-10 13:38:14</updated>
 		</user>
 		<token>991ae7419a32e074e9a4ff4ea7ac4b70</token>
-	</response>
+	</response>```
 * Le token sera aussi présent dans le cookie "rest[Auth][token]"
 
 Utiliser le token pour signer vos requètes suivantes
