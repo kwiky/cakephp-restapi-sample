@@ -1,0 +1,5 @@
+/app/Config/database.php
+/app/tmp
+.DS_Store
+Thumbs.db
+/lib/Cake
